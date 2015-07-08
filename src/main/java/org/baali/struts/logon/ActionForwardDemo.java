@@ -13,8 +13,8 @@ public class ActionForwardDemo extends Action
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest req, HttpServletResponse res)
 	{
 		ActionForward af = mapping.findForward("forward");
-		String path = af.getPath().toString() + "/forward.jsp?name=Balaji";
-		return new ActionForward("/forward/forward.jsp");
+		String path = af.getPath().toString() + "/forward.jsp?name=Rajan";
+		return new ActionForward(path);
 	}
 
 }

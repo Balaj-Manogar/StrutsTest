@@ -29,6 +29,13 @@
 			<forward name="welcome" path="/logging/welcome.jsp" />
 			<forward name="loginAgain" path="/logging/logon.jsp" />
 		</action>
+		
+		<!-- Progamatically forwarding to the jsp file -->
+		<action path="/action-forward" type="org.baali.struts.logon.ActionForwardDemo"
+			input="/index.jsp" name="actionForwardDemo">
+			<!-- this forward refers the path -->
+			<forward name="forward" path="/forward" />
+		</action>
      </action-mappings>
      
      <message-resources parameter="resources.application" />
