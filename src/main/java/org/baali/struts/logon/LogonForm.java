@@ -1,4 +1,4 @@
-`package org.baali.struts.logon;
+package org.baali.struts.logon;
 
 import javax.servlet.http.HttpServletRequest;
 
