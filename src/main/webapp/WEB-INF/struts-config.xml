@@ -6,6 +6,7 @@
  <struts-config>
      <form-beans>
          <form-bean name="logForm" type="org.baali.struts.logon.LogonForm" />
+         <form-bean name="errorsForm" type="org.baali.struts.logon.ActionErrorsForm" />
      </form-beans>
      
      <global-forwards>
@@ -36,6 +37,10 @@
 			<!-- this forward refers the path -->
 			<forward name="forward" path="/forward" />
 		</action>
+		
+		<!-- Action Errors demo -->
+		<action path="/action-error" type="org.baali.struts.logon.ActionErrorsDemo" name="errorsForm"
+			validate="true" input="/forward/messages.jsp" />
      </action-mappings>
      
      <message-resources parameter="resources.application" />

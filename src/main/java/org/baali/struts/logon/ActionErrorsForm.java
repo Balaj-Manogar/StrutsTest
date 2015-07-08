@@ -15,25 +15,30 @@ public class ActionErrorsForm extends ActionForm
 	private static final long serialVersionUID = 1L;
 	private String username;
 	private String password;
-	
-	public ActionErrors validate(ActionMapping mapping, HttpServletRequest request)
+
+	public ActionErrors validate(ActionMapping mapping,
+			HttpServletRequest request)
 	{
 		ActionErrors errors = new ActionErrors();
-		errors.add("username",new ActionMessage("error.username"));
+		errors.add("username", new ActionMessage("error.username"));
 		return errors;
 	}
+
 	public String getUsername()
 	{
 		return username;
 	}
+
 	public void setUsername(String username)
 	{
 		this.username = username;
 	}
+
 	public String getPassword()
 	{
 		return password;
 	}
+
 	public void setPassword(String password)
 	{
 		this.password = password;
