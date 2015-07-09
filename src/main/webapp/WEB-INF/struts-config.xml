@@ -65,6 +65,10 @@
 		<!-- DispatchAction Demo -->
 		<action path="/action/dispatch" type="org.baali.struts.logon.DispatchActionDemo"
 			parameter="method" />
+			
+		<!-- LookupDispatchAction Demo -->
+		<action path="/action/lookup" type="org.baali.struts.logon.LookupDispatchActionDemo"
+			parameter="p" />
 
 	</action-mappings>
 
