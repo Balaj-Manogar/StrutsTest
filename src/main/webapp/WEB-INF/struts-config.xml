@@ -91,6 +91,17 @@
 			<forward name="success" path="/switch.do?page=/action/module2.do&amp;prefix=/module2" />
 		</action>
 		
+		<!-- Detect Duplicate form submission using struts saveToken -->
+		<action path="/action/duplicate-logon" type="org.baali.struts.logon.HandleDuplicateLogOn"
+			input="/forward/duplicateForm.jsp">
+			<forward name="success" path="/forward/duplicateForm.jsp" />
+		</action>
+		<action path="/action/detect-duplicate-logon" type="org.baali.struts.logon.DuplicateLogOnIdentifierAction"
+			name="logForm" input="/forward/duplicateForm.jsp">
+			<forward name="duplicate" path="/forward/duplicate.jsp" />
+			<forward name="success" path="/forward/duplicateForm.jsp" redirect="false" />
+		</action>
+		
 	</action-mappings>
 
 	<message-resources parameter="resources.application" />
