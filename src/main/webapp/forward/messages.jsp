@@ -27,7 +27,7 @@
 		My name isggg present!!!
 	</logic:messagesPresent>
 
-	<logic:messagesNotPresent>
+	<logic:messagesNotPresent message="true">
 		<p>messages not found</p>
 	</logic:messagesNotPresent>
 
@@ -41,5 +41,23 @@
 			</logic:present>
 		</html:messages>
 	</logic:messagesPresent>
+
+	<!-- Printing selected error message with checking -->
+	<logic:messagesPresent property="message2" message="true">
+		<html:messages id="pass" property="message2" message="true">
+			<h2>
+				<c:out value="${pass }"></c:out>
+			</h2>
+		</html:messages>
+	</logic:messagesPresent>
+
+	<!-- Printing selected error message without checking -->
+	<html:messages id="pass" property="message2" message="true">
+		<h2>
+			<c:out value="${pass }:BBBBB"></c:out>
+		</h2>
+	</html:messages>
+
+
 </body>
 </html>
