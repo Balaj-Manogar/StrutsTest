@@ -40,7 +40,7 @@
 		
 		<!-- Action Errors demo -->
 		<action path="/action-error" type="org.baali.struts.logon.ActionErrorsDemo" name="errorsForm"
-			validate="true" input="/forward/messages.jsp" />
+			validate="false"  />
      </action-mappings>
      
      <message-resources parameter="resources.application" />
