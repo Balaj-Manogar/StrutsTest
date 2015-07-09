@@ -7,6 +7,7 @@
 	<form-beans>
 		<form-bean name="logForm" type="org.baali.struts.logon.LogonForm" />
 		<form-bean name="errorsForm" type="org.baali.struts.logon.ActionErrorsForm" />
+		<form-bean name="registerForm" type="org.baali.struts.RegisterForm" />
 	</form-beans>
 
 	<global-forwards>
@@ -45,6 +46,13 @@
 		<!-- Messages Demo -->
 		<action path="/action/message" type="org.baali.struts.logon.SimpleActionMessageDemo"
 			validate="false" input="/index.jsp" />
+
+		<!-- Simple action demo -->
+		<action path="/register" type="org.baali.struts.RegisterAction" name="registerForm"
+			input="error.jsp">
+			<forward name="success" path="/success.html" />
+			<forward name="failure" path="/failure.html" />
+		</action>
 	</action-mappings>
 
 	<message-resources parameter="resources.application" />

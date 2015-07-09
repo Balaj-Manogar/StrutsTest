@@ -11,7 +11,7 @@
 <title>Action Message Demo</title>
 </head>
 <body>
-<h1><a href="http://localhost:8080/test.struts1.2/">Home page</a></h1>
+<h1><a href="http://localhost:8080/StrutsDemo/">Home page</a></h1>
 
 <logic:messagesPresent message="true">
 	<h3>Prints all actions that added in the specified action class</h3>
