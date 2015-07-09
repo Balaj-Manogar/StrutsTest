@@ -13,7 +13,7 @@
 </head>
 <body>
 	<h1>
-		<a href="http://localhost:8080/test.struts1.2/">Home page</a>
+		<a href="http://localhost:8080/StrutsDemo/">Home page</a>
 	</h1>
 	<html:errors />
 	<html:form action="/action/validator-form"
