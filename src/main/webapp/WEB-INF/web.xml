@@ -21,8 +21,19 @@
     </init-param>    
     <load-on-startup>1</load-on-startup>
   </servlet>
+  
+  <servlet>
+  	<servlet-name>ForwardActionServlet</servlet-name>
+  	<servlet-class>org.baali.struts.logon.ForwardActionServlet</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
        <servlet-name>action</servlet-name>
        <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>ForwardActionServlet</servlet-name>
+  	<url-pattern>/action/forward-servlet/</url-pattern>
   </servlet-mapping>
 </web-app>
