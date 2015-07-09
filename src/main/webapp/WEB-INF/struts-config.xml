@@ -65,15 +65,22 @@
 		<!-- DispatchAction Demo -->
 		<action path="/action/dispatch" type="org.baali.struts.logon.DispatchActionDemo"
 			parameter="method" />
-			
+
 		<!-- LookupDispatchAction Demo -->
 		<action path="/action/lookup" type="org.baali.struts.logon.LookupDispatchActionDemo"
 			parameter="p" />
-			
-		<!--  Forward Action to Servlet -->
+
+		<!-- Forward Action to Servlet -->
 		<action path="/forwardSubmitServlet" name="actionFromForwardForm"
 			type="org.apache.struts.actions.ForwardAction" parameter="/action/forward-servlet/" />
 
+		<!-- Forwrd one action to another action -->
+		<action path="/forwardSubmitAction" name="actionFromForwardForm"
+			type="org.apache.struts.actions.ForwardAction" parameter="/action/actionFromForward.do" />
+
+		<action path="/action/actionFromForward" type="org.baali.struts.logon.ActionFromForward">
+			<forward name="success" path="/logging/logon.jsp" />
+		</action>
 	</action-mappings>
 
 	<message-resources parameter="resources.application" />
