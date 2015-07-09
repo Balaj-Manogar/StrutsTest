@@ -81,6 +81,16 @@
 		<action path="/action/actionFromForward" type="org.baali.struts.logon.ActionFromForward">
 			<forward name="success" path="/logging/logon.jsp" />
 		</action>
+		
+		<!-- SwitchAction is used to switch action from one config to another config file -->
+		<!-- SwitchAction expects two request parameters to be passed -->
+		<!-- page parameter detemines action name -->
+		<!-- prefix parameter determines module file name -->
+		<action path="/switch" type="org.apache.struts.actions.SwitchAction" />
+		<action path="/action/switch-action" type="org.baali.struts.logon.SwitchActionDemo">
+			<forward name="success" path="/switch.do?page=/action/module2.do&amp;prefix=/module2" />
+		</action>
+		
 	</action-mappings>
 
 	<message-resources parameter="resources.application" />

@@ -3,37 +3,40 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-    <servlet-name>action</servlet-name>
-    <servlet-class>
-        org.apache.struts.action.ActionServlet
-    </servlet-class>
-    <init-param>
-        <param-name>config</param-name>
-        <param-value>/WEB-INF/struts-config.xml
-        </param-value>
-    </init-param>
-    
-    <init-param>
-      <param-name>debug</param-name>
-      <param-value>2</param-value>
-    </init-param>    
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  
-  <servlet>
-  	<servlet-name>ForwardActionServlet</servlet-name>
-  	<servlet-class>org.baali.struts.logon.ForwardActionServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-       <servlet-name>action</servlet-name>
-       <url-pattern>*.do</url-pattern>
-  </servlet-mapping>
-  
-  <servlet-mapping>
-  	<servlet-name>ForwardActionServlet</servlet-name>
-  	<url-pattern>/action/forward-servlet/</url-pattern>
-  </servlet-mapping>
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>config/module2</param-name>
+			<param-value>/WEB-INF/module2.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>2</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>ForwardActionServlet</servlet-name>
+		<servlet-class>org.baali.struts.logon.ForwardActionServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>ForwardActionServlet</servlet-name>
+		<url-pattern>/action/forward-servlet/</url-pattern>
+	</servlet-mapping>
 </web-app>
