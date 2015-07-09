@@ -53,6 +53,15 @@
 			<forward name="success" path="/success.html" />
 			<forward name="failure" path="/failure.html" />
 		</action>
+		
+		<!-- Struts Bridged Actions -->
+		<action path="/action/forward-action" type="org.apache.struts.actions.ForwardAction"
+			parameter="/forward/struts-forward.jsp" input="/index.jsp" />
+		<action path="/action/include-page" type="org.apache.struts.actions.IncludeAction"
+			parameter="/forward/action-include.jsp" />
+		<action path="/action/include" type="org.apache.struts.actions.ForwardAction"
+			parameter="/forward/includeActionDemo.jsp" />
+		
 	</action-mappings>
 
 	<message-resources parameter="resources.application" />
